@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body class="">
+    <h1
+      class="text-center border-black border-2 border-solid p-5 w-1-3 mx-auto"
+    >
+      Bookshelf
+    </h1>
+    <div
+      id="statsBox"
+      class="w-2-3 flex mx-auto text-center justify-center font-sans text-xl"
+    >
+      <div class="border-black border-2 border-solid p-5 w-1-3">
+        <span id="tbr" class="font-bold text-2xl"></span>
+        <br />
+        in TBR
+      </div>
+      <div class="border-black border-2 border-solid p-5 w-1-3">
+        <span id="readingGoal" class="font-bold text-2xl"></span>
+        <br />
+        in Goal
+      </div>
+      <div class="border-black border-2 border-solid p-5 w-1-3">
+        <span id="booksRead" class="font-bold text-2xl"></span>
+        <br />
+        Read
+      </div>
+    </div>
+    <div class="w-2-3 mx-auto text-center font-sans mb-5">
+      You have <em id="goalRemaining">12</em> books left to complete your yearly
+      reading goal
+    </div>
+    <div
+      id="booksContainer"
+      class="w-2-3 mx-auto font-sans text-white booksContainerStyle p-5"
+    ></div>
+
+    <!-- Book update dialog -->
+    <dialog id="favDialog" class="font-sans rounded-3xl border-none">
+      <h3 id="dialogTitle" class="text-center m-0"></h3>
+      <p id="pagesRead"></p>
+      <p>
+        <label>
+          New pages read:
+          <input type="number" id="newPagesRead" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Finished:
+          <input type="checkbox" id="newFinished" />
+        </label>
+      </p>
+      <div>
+        <button onclick="closeDialog()">Cancel</button>
+        <button onclick="confirmPageUpdate()">Confirm</button>
+      </div>
+    </dialog>
+  </body>
+</html>
